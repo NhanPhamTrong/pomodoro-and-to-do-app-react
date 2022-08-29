@@ -17,8 +17,6 @@
         .checkbox {
             height: 1.5rem;
             width: 1.5rem;
-            background-color: rgba(222, 85, 106, 0.4);
-            border: $high solid 0.15rem;
             border-radius: 10rem;
             position: relative;
     
@@ -101,6 +99,13 @@
     
     li.hide {
         display: none;
+    }
+    
+    li.High {
+        .checkbox {
+            background-color: rgba(222, 85, 106, 0.4);
+            border: $high solid 0.15rem;
+        }
     }
 
     li.Medium {

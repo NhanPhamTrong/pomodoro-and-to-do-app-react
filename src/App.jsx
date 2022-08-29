@@ -26,7 +26,7 @@ export const App = () => {
     }    
 
     const AddTask = (newTask) => {
-        if (newTask.name.trim().length !== 0) {
+        if (newTask.name.trim().length !== 0 && newTask.priority !== "") {
             task.unsorted.push(newTask)
         }
 

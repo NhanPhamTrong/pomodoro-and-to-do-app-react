@@ -3,6 +3,21 @@
 .add-task-section {
     left: 200%;
 
+    .is-error {
+        height: 0;
+        width: fit-content;
+        color: $error;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .is-error.error {
+        height: auto;
+        display: block;
+        opacity: 1;
+        pointer-events: all;
+    }
+
     .return {
         height: 3rem;
         width: 3rem;
@@ -32,18 +47,26 @@
 
     form {
         display: grid;
-        grid-row-gap: 1rem;
 
         input {
             width: 100%;
             padding: 1rem;
             background-color: $primary;
+            border: transparent solid 0.15rem;
             border-radius: 0.325rem;
             color: $on-primary-light;
         }
 
         input:focus {
             outline: rgb(109, 124, 255) solid 0.15rem;
+        }
+
+        input:nth-child(3) {
+            margin: 1rem 0;
+        }
+
+        input.error {
+            border: $error solid 0.15rem;            
         }
 
         button {
@@ -60,17 +83,12 @@
         button:active {
             transform: scale(0.9);
         }
-
-        span {
-            width: fit-content;
-            background-color: $error;
-            color: $on-error;
-        }
     }
 
     ul {
         padding: 1rem;
         background-color: $primary;
+        border: transparent solid 0.15rem;
         border-radius: 0.325rem;
         display: flex;
 
@@ -114,5 +132,9 @@
                 border: $low solid 0.15rem;
             }
         }
+    }
+
+    ul.error {
+        border: $error solid 0.15rem;
     }
 }

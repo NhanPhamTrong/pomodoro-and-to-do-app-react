@@ -79,8 +79,6 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
 .task-list li .checkbox {
   height: 1.5rem;
   width: 1.5rem;
-  background-color: rgba(222, 85, 106, 0.4);
-  border: #de556a solid 0.15rem;
   border-radius: 10rem;
   position: relative;
 }
@@ -158,6 +156,11 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
 
 .task-list li.hide {
   display: none;
+}
+
+.task-list li.High .checkbox {
+  background-color: rgba(222, 85, 106, 0.4);
+  border: #de556a solid 0.15rem;
 }
 
 .task-list li.Medium .checkbox {

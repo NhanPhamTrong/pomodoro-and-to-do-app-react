@@ -62,6 +62,23 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
   left: 200%;
 }
 
+.add-task-section .is-error {
+  height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #de556a;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.add-task-section .is-error.error {
+  height: auto;
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}
+
 .add-task-section .return {
   height: 3rem;
   width: 3rem;
@@ -95,19 +112,27 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
 .add-task-section form {
   display: -ms-grid;
   display: grid;
-  grid-row-gap: 1rem;
 }
 
 .add-task-section form input {
   width: 100%;
   padding: 1rem;
   background-color: #414141;
+  border: transparent solid 0.15rem;
   border-radius: 0.325rem;
   color: white;
 }
 
 .add-task-section form input:focus {
   outline: #6d7cff solid 0.15rem;
+}
+
+.add-task-section form input:nth-child(3) {
+  margin: 1rem 0;
+}
+
+.add-task-section form input.error {
+  border: #de556a solid 0.15rem;
 }
 
 .add-task-section form button {
@@ -130,17 +155,10 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
           transform: scale(0.9);
 }
 
-.add-task-section form span {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #de556a;
-  color: white;
-}
-
 .add-task-section ul {
   padding: 1rem;
   background-color: #414141;
+  border: transparent solid 0.15rem;
   border-radius: 0.325rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,5 +198,9 @@ body #root main .pomodoro, body #root main .task-section, body #root main .add-t
 .add-task-section ul li:nth-child(3) button.active {
   background-color: rgba(12, 192, 106, 0.4);
   border: #0cc06a solid 0.15rem;
+}
+
+.add-task-section ul.error {
+  border: #de556a solid 0.15rem;
 }
 /*# sourceMappingURL=AddTaskSection.css.map */
