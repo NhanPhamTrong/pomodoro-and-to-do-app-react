@@ -1,0 +1,30 @@
+@import "reset";
+@import "variables";
+
+body {
+    #root {
+        height: 100vh;
+        width: 100%;
+        font-size: 1rem;
+        position: relative;
+        overflow: hidden;
+
+        main {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            transition: 0.4s;
+
+            .pomodoro, .task-section, .add-task-section {
+                height: 100%;
+                width: 100%;
+                background-color: $background;
+                color: $on-primary-light;
+                padding: 0 1rem;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}

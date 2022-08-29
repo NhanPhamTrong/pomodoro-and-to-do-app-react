@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a, a:active {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input, button {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body #root {
+  height: 100vh;
+  width: 100%;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body #root main {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body #root main .pomodoro, body #root main .task-section, body #root main .add-task-section {
+  height: 100%;
+  width: 100%;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+}
+
+header {
+  padding: 1rem;
+}
+
+header .container {
+  padding: 1rem;
+  background-color: #414141;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container hr {
+  margin: 0 1rem;
+  border: #b4b4b4 solid 1px;
+}
+
+header .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container div h1 {
+  margin-right: 0.5rem;
+  color: white;
+  font-size: 3rem;
+}
+
+header .container div p {
+  color: #b4b4b4;
+}
+/*# sourceMappingURL=Header.css.map */

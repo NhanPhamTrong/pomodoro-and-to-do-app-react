@@ -1,0 +1,118 @@
+@import "../../assets/global-styles/global-styles";
+
+.add-task-section {
+    left: 200%;
+
+    .return {
+        height: 3rem;
+        width: 3rem;
+        margin-top: 3rem;
+        background-color: $secondary;
+        border-radius: 10rem;
+        color: $on-secondary;
+        font-size: 1.5rem;
+        position: relative;
+        transition: 0.2s;
+
+        ion-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .return:active {
+        transform: scale(0.9);
+    }
+
+    h1, h2 {
+        margin: 1rem 0;
+    }
+
+    form {
+        display: grid;
+        grid-row-gap: 1rem;
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            background-color: $primary;
+            border-radius: 0.325rem;
+            color: $on-primary-light;
+        }
+
+        input:focus {
+            outline: rgb(109, 124, 255) solid 0.15rem;
+        }
+
+        button {
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            background-color: $secondary;
+            border-radius: 0.325rem;
+            color: $on-secondary;
+            font-size: 1.25rem;
+            justify-self: end;
+            transition: 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        span {
+            width: fit-content;
+            background-color: $error;
+            color: $on-error;
+        }
+    }
+
+    ul {
+        padding: 1rem;
+        background-color: $primary;
+        border-radius: 0.325rem;
+        display: flex;
+
+        li {
+            width: 100%;
+            padding: 0;
+            display: block;
+
+            button {
+                width: 100%;
+                padding: 0.5rem 0;
+                background-color: rgba(180, 180, 180, 0.2);
+                border: rgba(180, 180, 180, 0.4) solid 0.15rem;
+                border-radius: 10rem;
+                color: $on-primary-light;
+                text-align: center;
+            }
+        }
+
+        li:nth-child(2) {
+            margin: 0 1rem;
+        }
+
+        li:nth-child(1) {
+            button.active {
+                background-color: rgba(222, 85, 106, 0.4);
+                border: $high solid 0.15rem;
+            }
+        }
+
+        li:nth-child(2) {
+            button.active {
+                background-color: rgba(255, 207, 92, 0.4);
+                border: $medium solid 0.15rem;
+            }
+        }
+
+        li:nth-child(3) {
+            button.active {
+                background-color: rgba(12, 192, 106, 0.4);
+                border: $low solid 0.15rem;
+            }
+        }
+    }
+}

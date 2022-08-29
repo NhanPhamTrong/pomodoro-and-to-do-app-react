@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a, a:active {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input, button {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body #root {
+  height: 100vh;
+  width: 100%;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body #root main {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body #root main .pomodoro, body #root main .task-section, body #root main .add-task-section {
+  height: 100%;
+  width: 100%;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+}
+
+.task-section {
+  left: 100%;
+}
+
+.task-section .task-list {
+  margin: 1.5rem 0;
+}
+
+.task-section .task-list h1 {
+  font-size: 1.5rem;
+}
+
+.task-section .task-list ul {
+  max-height: 15.5rem;
+  margin: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 0.5rem;
+  overflow: auto;
+}
+
+.task-section .task-list .statistic {
+  padding: 1rem;
+  background-color: #414141;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.task-section .task-list .statistic button {
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.task-section .task-list .statistic button.active, .task-section .task-list .statistic button:active {
+  color: #6d7cff;
+  -webkit-transform: scale(1.15) translate(0);
+          transform: scale(1.15) translate(0);
+}
+
+.task-section .task-list .statistic .sort {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-section .add-task {
+  width: 80%;
+  margin-left: 50%;
+  padding: 0.5rem;
+  background-color: #6d7cff;
+  border-radius: 0.325rem;
+  color: white;
+  font-size: 1.25rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.task-section .add-task:active {
+  -webkit-transform: translateX(-50%) scale(0.9);
+          transform: translateX(-50%) scale(0.9);
+}
+/*# sourceMappingURL=TaskSection.css.map */

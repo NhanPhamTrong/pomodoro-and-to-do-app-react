@@ -1,0 +1,32 @@
+@import "../../assets/global-styles/global-styles";
+
+header {
+    padding: 1rem;
+
+    .container {
+        padding: 1rem;
+        background-color: $primary;
+        border-radius: 1rem;
+        display: flex;
+
+        hr {
+            margin: 0 1rem;
+            border: $on-primary solid 1px;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                margin-right: 0.5rem;
+                color: $on-primary-light;
+                font-size: 3rem;
+            }
+
+            p {
+                color: $on-primary;
+            } 
+        }
+    }
+}

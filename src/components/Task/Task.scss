@@ -1,0 +1,119 @@
+@import "../../assets/global-styles/global-styles";
+
+.task-list {
+    li {
+        padding: 1rem;
+        background-color: $primary;
+        border-radius: 1rem;
+        display: grid;
+        grid-column-gap: 0.5rem;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    
+        button {
+            color: $on-primary-light;
+        }
+    
+        .checkbox {
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: rgba(222, 85, 106, 0.4);
+            border: $high solid 0.15rem;
+            border-radius: 10rem;
+            position: relative;
+    
+            ion-icon {
+                display: none;
+                font-weight: 700;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    
+        .content {
+            display: grid;
+    
+            button {
+                font-size: 1.25rem;
+                text-align: left;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+    
+            p {
+                height: 0;
+                color: $on-primary;
+                cursor: text;
+                opacity: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                pointer-events: none;
+                transition: 0.4s;
+            }
+        }
+    
+        .content.active {
+            button {
+                white-space: normal;
+            }
+    
+            p {
+                height: auto;
+                opacity: 1;
+                pointer-events: all;
+                white-space: normal;
+            }
+        }
+        
+        .delete {
+            height: 1.5rem;
+            width: 1.5rem;
+            color: $secondary;
+            font-size: 1.75rem;
+            position: relative;
+    
+            ion-icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate((-50%, -50%));
+            }
+        }
+    }
+    
+    li.completed {
+        .checkbox {
+            ion-icon {
+                display: block;
+            }
+        }
+
+        .content {
+            button, p {
+                text-decoration: line-through;
+            }
+        }
+    }
+    
+    li.hide {
+        display: none;
+    }
+
+    li.Medium {
+        .checkbox {
+            background-color: rgba(255, 207, 92, 0.4);
+            border: $medium solid 0.15rem;
+        }
+    }
+
+    li.Low {
+        .checkbox {
+            background-color: rgba(12, 192, 106, 0.4);
+            border: $low solid 0.15rem;
+        }
+    }
+}

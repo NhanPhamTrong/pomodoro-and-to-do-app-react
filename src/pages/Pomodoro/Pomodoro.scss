@@ -1,0 +1,93 @@
+@import "../../assets/global-styles/global-styles";
+
+.pomodoro {
+    left: 0;
+    
+    .timer-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .count-session {
+            span {
+                height: 0.75rem;
+                width: 0.75rem;
+                margin: 1rem;
+                background-color: $primary;
+                border-radius: 10rem;
+                display: inline-block;
+            }
+
+            span.active {
+                background-color: $secondary;
+                box-shadow: 0 0 0.5rem $secondary,
+                            0 0 1rem $secondary,
+                            0 0 1.5rem $secondary;
+            }
+        }
+        
+        .clock {
+            height: 20rem;
+            width: 20rem;
+            margin-bottom: 1.5rem;
+            border-radius: 20rem;
+            position: relative;
+            
+            svg {
+                height: 20rem;
+                width: 20rem;
+                position: relative;
+                transform: rotate(-90deg);
+                
+                circle {
+                    height: 100%;
+                    width: 100%;
+                    fill: transparent;
+                    stroke: $primary;
+                    stroke-width: 30;
+                    transform: translate(15px, 15px);
+                }
+                    
+                circle:nth-child(2) {
+                    stroke-dasharray: 911;
+                }
+            }
+            
+            .timer {
+                height: 18rem;
+                width: 18rem;
+                border-radius: 20rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 6rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .timer-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+    
+            button {
+                padding: 0.5rem 1rem;
+                background: $secondary-dark;
+                border-radius: 0.325rem;
+                color: $secondary;
+                font-size: 1.5rem;
+                font-weight: 700;
+                transition: 0.4s;
+            }
+
+            button:active, button.active {
+                background: $secondary;
+                color: $on-secondary;
+            }
+        }
+    }
+}
