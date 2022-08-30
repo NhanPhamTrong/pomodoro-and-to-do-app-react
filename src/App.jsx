@@ -1,4 +1,5 @@
 import { Navbar } from "./components/Navbar/Navbar"
+import { Header } from "./components/Header/Header"
 import { Pomodoro } from "./pages/Pomodoro/Pomodoro"
 import { TaskSection } from "./pages/TaskSection/TaskSection"
 import { AddTaskSection } from "./pages/AddTaskSection/AddTaskSection"
@@ -155,6 +156,7 @@ export const App = () => {
             <Navbar
                 OpenPomodoro={OpenPomodoro}
                 OpenTaskSection={OpenTaskSection} />
+            <Header number={task.unsorted.length} />
             <main style={{left : mainLeft}}>
                 <Pomodoro />
                 <TaskSection

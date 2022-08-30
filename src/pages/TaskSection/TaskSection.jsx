@@ -1,5 +1,4 @@
 import "./TaskSection.scss"
-import { Header } from "../../components/Header/Header"
 import { Task } from "../../components/Task/Task"
 import { useState } from "react"
 
@@ -60,7 +59,6 @@ export const TaskSection = (props) => {
     return (
         <>
             <div className="task-section">
-                <Header />
                 <div className="task-list">
                     <h1>All tasks</h1>
                     <ul>
@@ -83,7 +81,7 @@ export const TaskSection = (props) => {
                         <button className={props.statistic[2] ? "active" : ""} type="button" onClick={GetCompleted}>Completed</button>
                         <hr />
                         <button className="sort" type="button" onClick={ClickSort}>
-                            <ion-icon name={sort === "up" ? "caret-up" : (sort === "down" ? "caret-down" : "ellipse")}></ion-icon>
+                            <ion-icon name={sort === "none" ? "caret-down" : (sort === "down" ? "caret-up" : "ellipse")}></ion-icon>
                         </button>
                     </div>
                 </div>

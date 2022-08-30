@@ -1,18 +1,11 @@
 import "./Header.scss"
 
-export const Header = () => {
+export const Header = (props) => {
     return (
         <header>
             <div className="container">
-                <div>
-                    <h1>6.4</h1>
-                    <p>Estimated time (h)</p>
-                </div>
-                <hr />
-                <div>
-                    <h1>4</h1>
-                    <p>Total tasks in project</p>
-                </div>
+                <h1>{props.number}</h1>
+                <p>total tasks in project</p>
             </div>
         </header>
     )

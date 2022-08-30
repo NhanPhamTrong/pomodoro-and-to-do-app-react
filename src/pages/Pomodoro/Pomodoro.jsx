@@ -1,5 +1,4 @@
 import "./Pomodoro.scss"
-import { Header } from "../../components/Header/Header"
 import { useState } from "react"
 import { useInterval } from 'usehooks-ts'
 
@@ -122,7 +121,6 @@ export const Pomodoro = () => {
     return (
         <>
             <div className="pomodoro">
-                <Header />
                 <div className="timer-section">
                     <div className="count-session">
                         <span className={activeSession[0]}></span>

@@ -63,21 +63,21 @@ export const AddTaskSection = (props) => {
                 <p className={"is-error " + (error.taskName ? "error" : "")}>Task name is empty</p>
                 <input className={error.taskName ? "error" : ""} id="name" type="text" placeholder="Task name" value={inputName} onChange={HandleChangeName} />
                 <input id="description" type="text" placeholder="Description (optional)" value={inputDescription} onChange={HandleChangeDescription} />
-                <button type="button" onClick={HandleSubmit}>Submit</button>
-            </form>
-            <h2>Task priority</h2>
-            <p className={"is-error " + (error.priority ? "error" : "")}>Priority is empty</p>
-            <ul className={error.priority ? "error" : ""}>
-                <li>
-                    <button type="button" name="High" onClick={ChooseLevel}>High</button>
-                </li>
-                <li>
-                    <button type="button" name="Medium" onClick={ChooseLevel}>Medium</button>
-                </li>
-                <li>
-                    <button type="button" name="Low" onClick={ChooseLevel}>Low</button>
-                </li>
-            </ul>
+                <h2>Task priority</h2>
+                <p className={"is-error " + (error.priority ? "error" : "")}>Priority is empty</p>
+                <ul className={error.priority ? "error" : ""}>
+                    <li>
+                        <button type="button" name="High" onClick={ChooseLevel}>High</button>
+                    </li>
+                    <li>
+                        <button type="button" name="Medium" onClick={ChooseLevel}>Medium</button>
+                    </li>
+                    <li>
+                        <button type="button" name="Low" onClick={ChooseLevel}>Low</button>
+                    </li>
+                </ul>
+                <button className="submit" type="button" onClick={HandleSubmit}>Submit</button>
+            </form>          
         </div>
     )
 }
